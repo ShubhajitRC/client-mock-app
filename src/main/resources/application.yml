@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    org:
+      springframework: info
+
+#management:
+#  enpoints:
+#    health:
+#      group:
+#        custom:
+#          show-components: always
+#          show-details: always
+#          include: diskSpace,ping
+
+# swagger-ui custom path
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method

@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: Mock Client
+  description: Mock Client
+  version: 1.0.0
+servers:
+  - url: 'https'
+
+paths:
+  /mock:
+    get:
+      summary: Mock end point
+      description: Mock end point
+      operationId: getMockClient
+      responses:
+        '200':
+          description: A list of enterprise applications
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MockData"
+        '5XX':
+          description: Internal server error
+components:
+  schemas:
+    MockData:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
